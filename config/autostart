@@ -29,6 +29,7 @@ hc keybind $Mod-Return spawn ${TERMINAL:-termite} # use your $TERMINAL with xter
 
 
 hc keybind $Mod-Shift-0 spawn ~/bin/herbsexit.sh
+hc keybind $Mod-Shift-d spawn ~/bin/herbsscreen.sh
 
 
 hc keybind $Mod-d spawn rofi -show run
