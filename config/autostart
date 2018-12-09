@@ -28,6 +28,9 @@ hc keybind $Mod-Shift-q close
 hc keybind $Mod-Return spawn ${TERMINAL:-termite} # use your $TERMINAL with xterm as fallback
 
 
+hc keybind $Mod-Shift-0 spawn ~/bin/herbsexit.sh
+
+
 hc keybind $Mod-d spawn rofi -show run
 hc keybind $Mod-w spawn rofi -show window
 

@@ -9,16 +9,14 @@
 
 pkg.link() {
     fs.link_file "$PKG_PATH/config" "$HOME/.config/herbstluftwm"
-    #$PKG_PATH/compile.sh
+    fs.link_rfiles "$PKG_PATH/bin" "$HOME/bin"
 }
 
 ##############################################################################
 
-#pkg.install(){
-#    # compile the i3 config file from config.d
-#    #~/.config/.i3/compile.sh
-#    $PKG_PATH/compile.sh
-#}
+pkg.install(){
+    mkdir -p ~/bin
+}
 
 ##############################################################################
 
