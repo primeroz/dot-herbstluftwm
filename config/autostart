@@ -173,4 +173,24 @@ panel=~/.config/herbstluftwm/panel.sh
 for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
     # start it on each monitor
     "$panel" $monitor &
+    if [[ $monitor -eq 0 ]]; then
+      killall trayer
+      trayer --edge top --align right --widthtype pixel --width 200 --height 16 --expand false --iconspacing 5 --alpha 0 --transparent true --tint "0x10101010"
+    fi
 done
+
+# UI
+~/.fehbg
+
+# Start apps
+killall nm-applet
+nm-applet &
+
+killall clipit
+clipit &
+
+killall pasystray
+pasystray &
+
+killall paramano
+paramano &
